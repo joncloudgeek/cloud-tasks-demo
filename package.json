@@ -1,0 +1,19 @@
+{
+  "name": "cloud-tasks-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "taskHandler": "functions-framework --port=9090 --target=taskHandler",
+    "taskGenerator": "functions-framework --target=taskGenerator"
+  },
+  "author": "Jonathan Lin",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/tasks": "^2.1.0"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^1.6.0"
+  }
+}
