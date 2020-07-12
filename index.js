@@ -28,6 +28,11 @@ exports.taskGenerator = async (req, res) => {
         "Content-Type": "application/json",
       };
     }
+    if (process.env.SERVICE_ACCOUNT_EMAIL) {
+      task.httpRequest.oidcToken = {
+        serviceAccountEmail: process.env.SERVICE_ACCOUNT_EMAIL,
+      };
+    }
 
     // Send create task request.
     console.log("Sending task:");
